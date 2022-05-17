@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-<meta charset = "UTF-8">
-<title>Assigment</title>
+    <meta charset="UTF-8">
+    <title>Assigment</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Homepage</h1>
+    <h1 style="color:#37a987 ;">Homepage</h1>
+    <img src="image_assigment3.png " alt="random" id="picture" align="right">
     <main>
         <nav>
-            <ol>
-                <li><a href="about.html" target = "_blank" >About me page</a></li>
-                <li><a href="hobbies.html" target = "_blank">Hobby Page</a></li>
-                <li><a href="goals.html" target = "_blank">Short term goals page</a></li>
-                <li><a href="food.html" target = "_blank">My favorite food</a></li>
+            <ol id="list_of_pages">
+                <li><a href="about.html" target="_blank">About me page</a></li>
+                <li><a href="hobbies.html" target="_blank">Hobby Page</a></li>
+                <li><a href="goals.html" target="_blank">Short term goals page</a></li>
+                <li><a href="food.html" target="_blank">My favorite food</a></li>
+
             </ol>
         </nav>
-        
+
         <script>
-            function button(){
-            window.open("https://github.com/sulikismaylovv/Training");}
+            function button() {
+                window.open("https://github.com/sulikismaylovv/Training");
+            }
         </script>
-        <body>
-            <button onclick="button()">Press to go git</button>
-        </body>
-    
+
+        <div>
+            <button onclick="button()" id="button">Press to go git</button>
+        </div>
+
+
+
     </main>
-    
+
 </body>

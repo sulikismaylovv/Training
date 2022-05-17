@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient( 90deg, #4b3d8f 50%, #37a987 50%);
+}
+
+#list_of_pages {
+    color: #37a987;
+}
+
+a:link,
+a:visited {
+    color: #37a987;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+button {
+    border-radius: 20px;
+    border-color: #37a987;
+    background-color: #37a987;
+}
+
+#picture {
+    height: 500px;
+    width: auto;
+    border-radius: 25%;
+    margin-top: 1cm;
+    margin-right: 5cm;
+}
