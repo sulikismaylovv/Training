@@ -1,0 +1,15 @@
+h1{
+    color: #ff0000;
+}
+
+h2{
+    color:green;
+}
+
+h3{
+    color: hsl(240, 100%, 50%);
+}
+
+h4{
+    color: hwb(80 20% 20%);
+}
