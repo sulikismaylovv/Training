@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient( 90deg, #4b3d8f 50%, #37a987 50%);
+    background: linear-gradient( 60deg, #4b3d8f 50%, #37a987 50%);
 }
 
 #list_of_pages {
@@ -23,6 +23,4 @@ button {
     height: 500px;
     width: auto;
     border-radius: 25%;
-    margin-top: 1cm;
-    margin-right: 5cm;
 }
