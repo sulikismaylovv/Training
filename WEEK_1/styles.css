@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient( 60deg, #4b3d8f 50%, #37a987 50%);
+    background: linear-gradient( to right, #4b3d8f, #37a987);
 }
 
 #list_of_pages {
