@@ -30,7 +30,7 @@ header-css
 header {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     font-size: 1.2rem;
 }
@@ -47,7 +47,7 @@ img {
 .row {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 50px;
 }
@@ -86,4 +86,26 @@ button-css
 .btn:hover,
 .btn:focus {
     opacity: .75;
+}
+
+
+/*
+random css
+*/
+
+.random {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: 1rem;
+}
+
+.random img {
+    width: 100px;
+}
+
+.row_pic {
+    display: flex;
+    justify-content: space-evenly;
 }
