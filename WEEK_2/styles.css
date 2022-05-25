@@ -1,18 +1,68 @@
 @font-face {
-    font-family: "Roboto1";
-    src: url(/Users/suleymanismaylov/VSCode/Training/Roboto/Roboto-Black.ttf) format("opentype");
+    font-family: "Roboto_regular";
+    src: url(Fonts/Roboto) format("opentype");
     ;
 }
 
-header {
+.upper_part {
     background-color: #1f2937;
-    color: antiquewhite;
+    color: white;
+    font-family: 'Roboto_regular', sans-serif;
+}
+
+header {
     display: flex;
     justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #E5E7EB;
 }
 
 .logo {}
 
 .links {
-    color: antiquewhite;
+    color: #F9FAF8;
+}
+
+img {
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 50px
+}
+
+.left_part h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.left_part {
+    max-width: 70%;
+}
+
+.right_part {
+    max-width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1f2937;
+    font-weight: bold;
+    background-color: #3882F6;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75;
 }
