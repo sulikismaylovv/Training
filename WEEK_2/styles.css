@@ -1,3 +1,7 @@
+/*
+fonts
+*/
+
 @font-face {
     font-family: "Roboto";
     src: url(Fonts/Roboto/Roboto-Regular.ttf) format("opentype");
@@ -10,16 +14,17 @@
     ;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
+/*
+header-css
+*/
 
 .upper_part {
     background-color: #1f2937;
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: #E5E7EB;
 }
 
 header {
@@ -28,14 +33,12 @@ header {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.2rem;
-    color: #E5E7EB;
 }
 
-.logo {}
 
-.links {
-    color: #F9FAF8;
-}
+/*
+css-start
+*/
 
 img {
     max-width: 100%;
@@ -49,19 +52,25 @@ img {
     padding: 50px;
 }
 
-.left_part h1 {
-    font-size: 3rem;
-    font-weight: bolder;
-    font-family: 'Roboto-Bold', sans-serif;
-}
-
 .left_part {
     max-width: 50%;
+}
+
+body .left_part h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto-Bold', sans-serif;
+    color: #F9FAF8;
 }
 
 .right_part {
     max-width: 100%;
 }
+
+
+/*
+button-css
+*/
 
 .btn {
     display: inline-block;
