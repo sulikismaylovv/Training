@@ -1,13 +1,25 @@
 @font-face {
-    font-family: "Roboto_regular";
-    src: url(Fonts/Roboto) format("opentype");
+    font-family: "Roboto";
+    src: url(Fonts/Roboto/Roboto-Regular.ttf) format("opentype");
     ;
+}
+
+@font-face {
+    font-family: "Roboto_bold";
+    src: url(Fonts/Roboto/Roboto-Bold.ttf) format("opentype");
+    ;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 .upper_part {
     background-color: #1f2937;
     color: white;
-    font-family: 'Roboto_regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -35,16 +47,16 @@ img {
     max-width: 800px;
     margin: 0 auto;
     padding: 50px;
-    gap: 50px
 }
 
 .left_part h1 {
     font-size: 3rem;
     font-weight: bolder;
+    font-family: 'Roboto-Bold', sans-serif;
 }
 
 .left_part {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .right_part {
