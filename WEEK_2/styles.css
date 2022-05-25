@@ -1,11 +1,18 @@
+@font-face {
+    font-family: "Roboto1";
+    src: url(/Users/suleymanismaylov/VSCode/Training/Roboto/Roboto-Black.ttf) format("opentype");
+    ;
+}
+
 header {
     background-color: #1f2937;
     color: antiquewhite;
-    width: 75%;
+    display: flex;
+    justify-content: space-between;
 }
 
-p {
-    background-color: rebeccapurple;
-    padding: 10px;
-    width: 50%;
+.logo {}
+
+.links {
+    color: antiquewhite;
 }
