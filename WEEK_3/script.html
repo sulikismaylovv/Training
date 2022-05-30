@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //assigment 1
+        let ex1_a = calculateDioganal(9);
+
+        function calculateDioganal(length) {
+            return length * Math.sqrt(2);
+        }
+
+        let ex1_b = calculateArea(5, 6, 7);
+
+        function calculateArea(side1, side2, side3) {
+            let s = (side1 + side2 + side3) / 2;
+            return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
+        }
+
+        let ex1_c = calculateCircumference(4)
+
+        function calculateCircumference(radius) {
+            return Math.PI * 2 * radius;
+        }
+
+        let ex1_d = calculateSurfaceArea(4);
+
+        function calculateSurfaceArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        //assigment 2
+        function compareNumber(number1, number2) {
+            if (number1 > number2) {
+                alert("Number1 is higher than Number2!")
+            }
+            if (number1 < number2) {
+                alert("Number1 is lower than Number2!")
+            }
+            if (number1 == number2) {
+                alert("Number1 and Number2 are equal!")
+            }
+        }
+
+        function chechIfOddOrEven(number) {
+            if (number % 2 == 0) {
+                alert("Number is even")
+            }
+            if (number % 2 != 0) {
+                alert("Number is odd")
+            }
+        }
+
+
+        //assigment 3
+        const answers = ["rock", "paper", "scissors"];
+        var userScore = 0;
+        var GameScore = 0;
+
+        function game() {
+            for (let i = 0; i < 3; i++) {
+                let GamerMove = prompt("Rock,Paper or Scissors?")
+                compareMoves(GamerMove, generateComputerMove());
+            }
+            if (GameScore > userScore) {
+                alert("You lost!" + "\r\n" + "Your score: " + userScore + "\r\n" + "Computer Score: " + GameScore)
+            }
+            if (GameScore < userScore) {
+                alert("You won!" + "\r\n" + "Your score: " + userScore + "\r\n" + "Computer Score: " + GameScore)
+            }
+            if (GameScore == userScore) {
+                alert("Draw!" + "\r\n" + "Your score: " + userScore + "\r\n" + "Computer Score: " + GameScore)
+            }
+        }
+
+        function compareMoves(move1, move2) {
+            var moveUser = String(move1).toLowerCase();
+            var moveGame = String(move2);
+
+            log("Your move: " + moveUser + ". Computer Move: " + moveGame);
+
+            if (moveUser.charAt(0) == "r") {
+                if (moveGame.charAt(0) == "r") {
+                    alert('Draw!')
+                }
+                if (moveGame.charAt(0) == "s") {
+                    alert('You win! Rock breaks Scissors.')
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "p") {
+                    alert('You lost! Paper covers Rock!')
+                    GameScore += 1
+                }
+            }
+            if (moveUser.charAt(0) == "s") {
+                if (moveGame.charAt(0) == "s") {
+                    alert('Draw!')
+                }
+                if (moveGame.charAt(0) == "p") {
+                    alert('You win! Scissors cut Paper.')
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "r") {
+                    alert('You lost! Rock breaks Scissors')
+                    GameScore += 1
+                }
+            }
+            if (moveUser.charAt(0) == "p") {
+                if (moveGame.charAt(0) == "p") {
+                    alert('Draw!')
+                }
+                if (moveGame.charAt(0) == "r") {
+                    alert('You win! Paper cover Rock.')
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "s") {
+                    alert('You lost! Scissors cut Paper.')
+                    GameScore += 1
+                }
+            }
+        }
+
+        function generateComputerMove() {
+            let comMove = answers[randomInteger(0, 3)];
+            return comMove;
+        }
+
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+</body>
+
+
+</html>
