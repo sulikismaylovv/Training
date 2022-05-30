@@ -67,7 +67,7 @@
 
         function game() {
             for (let i = 0; i < 5; i++) {
-                let GamerMove = prompt("Rock,Paper or Scissors?")
+                let GamerMove = prompt(`Round ${i+1}.` + "\r\n" + "Rock,Paper or Scissors?")
                 compareMoves(GamerMove, generateComputerMove());
             }
             if (GameScore > userScore) {
@@ -140,6 +140,7 @@
         }
     </script>
 </body>
+
 
 
 </html>
