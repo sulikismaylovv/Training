@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript assigments</title>
 </head>
 
 <body>
@@ -14,26 +14,27 @@
         let ex1_a = calculateDioganal(9);
 
         function calculateDioganal(length) {
-            return length * Math.sqrt(2);
+            return "dioganal for side 9 is: " + length * Math.sqrt(2);
         }
 
         let ex1_b = calculateArea(5, 6, 7);
 
         function calculateArea(side1, side2, side3) {
             let s = (side1 + side2 + side3) / 2;
-            return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
+            return "Area of triangle is: " + Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
         }
 
         let ex1_c = calculateCircumference(4)
 
         function calculateCircumference(radius) {
-            return Math.PI * 2 * radius;
+            return "Circumference: " +
+                Math.PI * 2 * radius;
         }
 
         let ex1_d = calculateSurfaceArea(4);
 
         function calculateSurfaceArea(radius) {
-            return Math.PI * radius * radius;
+            return "Surface Area: " + Math.PI * radius * radius;
         }
 
         //assigment 2
@@ -78,6 +79,8 @@
             if (GameScore == userScore) {
                 alert("Draw!" + "\r\n" + "Your score: " + userScore + "\r\n" + "Computer Score: " + GameScore)
             }
+            GameScore = 0;
+            userScore = 0;
         }
 
         function compareMoves(move1, move2) {
