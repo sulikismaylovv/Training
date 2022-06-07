@@ -64,12 +64,16 @@
                 i++;
                 checkScore();
             });
+            btn_play.addEventListener('click', () => {
+                location.reload();
+            });
+            
             
         }
 
         function checkScore() {
             text = "Round " + (i + 1) + "! Make your move!";
-            if (userScore == 2 || GameScore == 2) {
+            if (userScore == 3 || GameScore == 3) {
                 if (GameScore > userScore) {
                     text = "You lost! " + "\r\n " + "Your score: " + userScore + "\r\n " + "Computer Score: " + GameScore;
                 }
