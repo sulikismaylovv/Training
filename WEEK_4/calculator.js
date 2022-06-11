@@ -3,15 +3,13 @@ var first_number;
 var operator_1;
 var second_number;
 var operator_2;
-var result = 0;
 
 const button = document.querySelectorAll('button');
+const display = document.getElementById("display");
 
 function updateDisplay(){
-    const display = document.getElementById("display");
     display.innerHTML = value;
 }
-
 
 function clickButton(){
     button.forEach(function (btn_pressed) {
@@ -31,10 +29,11 @@ function clickButton(){
                 }
                 if(btn_pressed.value == "neg"){
                     negate();
+                    updateDisplay();
                     console.log(btn_pressed.value);
                 }
                 if(btn_pressed.value == "decimal"){
-                    //decimal();
+                    decimal();
                     console.log(btn_pressed.value);
                 }
                 if(btn_pressed.value == "equals"){
@@ -45,14 +44,14 @@ function clickButton(){
                     addOperator(btn_pressed.value)
                 }
             }
-            updateDisplay();
+            
         });
     });
 }
 
 function addOperand(operand){
     if (first_number == null){
-        if (value = '0'){
+        if (value == '0' || value == 0){
         value = operand;}
         else{
             value += operand;
@@ -99,6 +98,7 @@ function delete_all(){
     operator_1 = null;
     operator_2=null;
     value = '0';
+    updateDisplay();
 }
 
 function delete_last(){
@@ -117,12 +117,15 @@ function negate(){
 
 function decimal(){
     var dot = ".";
-    if(!value.includes(dot)){
+    if(first_number == value || second_number == value){
+        value = '0';
         value += dot;
     }
+    if(!value.toString().includes(dot)){
+        value += dot;
+    }
+    updateDisplay();
 }
-
-
 
 function calculate(x,y,op){
     if(op === '+') {
