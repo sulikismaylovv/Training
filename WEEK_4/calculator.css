@@ -12,6 +12,13 @@ body{
     display: grid;
 }
 
+.display{
+    background-color: black;
+    border: 10px solid rgba(47,47,47,1);
+    border-radius: 4px;
+    gap: 2px;
+}
+
 .row{
     display: flex;
     justify-content: center;

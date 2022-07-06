@@ -52,12 +52,18 @@ function clickButton(){
 function addOperand(operand){
     if (first_number == null){
         if (value == '0' || value == 0){
-        value = operand;}
+            //1st click - handles first operand input
+            value = operand;}
+        else if(value == first_number){
+            //starts new operation after equals()
+            value += operand
+        }
         else{
             value += operand;
         }
     }
     else{
+        //3rd/5th click - inputs to second number
         if(value == first_number){
             value = operand;
         }
@@ -69,7 +75,7 @@ function addOperand(operand){
 function addOperator(operator){
     if (first_number != null && second_number != null){
         second_number = value;
-        value = calculate(Number(first_number), Number(second_number), operator_1);
+        value = calculate(Number(first_number), Number(second_number), operator_2);
         operator_2 = operator;
         first_number = value;
     }
@@ -82,14 +88,28 @@ function addOperator(operator){
     else{
     first_number = value;
     operator_1 = operator; }
+    updateDisplay()
+
 }
 
 function equals(){
-    if (first_number!=null){
+    if (first_number == null){
+        value = first_number;
+    }
+    else if (second_number!=null){
+        value = calculate(Number(first_number), Number(second_number), operator_1);
+        
+    }
+    else{
         second_number = value;
         value = calculate(Number(first_number), Number(second_number), operator_1);
-        updateDisplay();
     }
+    updateDisplay();
+    first_number = value;
+    second_number = null;
+    operator_1 = null;
+    operator_2 = null;
+    value = null;
 }
 
 function delete_all(){
@@ -128,20 +148,28 @@ function decimal(){
 }
 
 function calculate(x,y,op){
+    let equation = 0;
     if(op === '+') {
-        return x + y;
+        equation =  (x + y);
     } else if(op === '-') {
-        return x - y;
+        equation = x - y;
     } else if(op === '*') {
-        return x * y;
+        equation =  x * y;
     } else if(op === '÷') {
         if(y === 0) {
             return 'can not divide by 0';
         } else {
-        return x / y;
+            equation =  x / y;
         }
     }
+    console.log(equation);
+    equation = roundAccurately(equation, 15);
+    return equation
 
+}
+
+function roundAccurately(num, places) {
+    return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
 updateDisplay();
