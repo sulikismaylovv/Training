@@ -98,7 +98,6 @@ function equals(){
     }
     else if (second_number!=null){
         value = calculate(Number(first_number), Number(second_number), operator_1);
-        
     }
     else{
         second_number = value;
